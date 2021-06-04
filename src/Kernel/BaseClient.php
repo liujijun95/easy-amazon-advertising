@@ -416,7 +416,7 @@ class BaseClient
             $report = \GuzzleHttp\json_decode($report, true);
         }
 
-        //unlink($temp_file);
+        unlink($temp_file);
 
         return [
             'success' => 200 == $response->getStatusCode() ? true : false,
